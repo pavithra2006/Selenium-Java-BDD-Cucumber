@@ -6,9 +6,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/java/org/features"} // defines the feature file path
-        , glue = {"org/stepdefinition"}     //defines step definition path
-        , plugin = {"pretty"}   //in terminal we will get scenario steps with respective logs, along with method name
+        features = {"src/test/resources/features"}
+        , glue = {"org/stepdefinition", "org/hooks"}
+        , plugin = {"pretty"
+        , "json:target/output-report/report.json"
+        , "junit:target/output-report/report.xml"}
+//        , publish = true    // reports will be retained only for 1 day
+//        , monochrome = true
+//        , dryRun = true
 )
 public class TestRunner {
 }
