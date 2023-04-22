@@ -41,4 +41,14 @@ public class SearchSteps {
     public void verify_registration_success() {
         System.out.println("Success");
     }
+
+    @When("user enter {string} and {string}")
+    public void user_enter_and(String username, String pswd) {
+        System.out.println(username + " " + pswd);
+    }
+
+    @Then("verify data entered")
+    public void verify_data_entered() {
+        System.out.println("Verify");
+    }
 }
