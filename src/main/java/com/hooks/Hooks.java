@@ -11,7 +11,6 @@ import io.cucumber.java.Scenario;
 public class Hooks {
     @Before
     public void setUp() {
-        System.out.println("Here");
         try {
             Driver.init(PropertiesUtil.getValue(ConfigProperties.BROWSER));
         } catch (InterruptedException e) {
@@ -20,15 +19,15 @@ public class Hooks {
     }
 
     @After(order = 1)
-    public void tearDown() {
-        Driver.quitDriver();
-    }
-
-    @After(order = 0)
     public void takeScreenshot(Scenario scenario) {
         if (scenario.isFailed()) {
             String screenshotName = scenario.getName().replace(" ", "_");
             scenario.attach(ScreenshotUtil.getBase64Image(), "image/png", screenshotName);
         }
+    }
+
+    @After(order = 0)
+    public void tearDown() {
+        Driver.quitDriver();
     }
 }

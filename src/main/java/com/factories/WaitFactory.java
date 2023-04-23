@@ -20,13 +20,13 @@ public final class WaitFactory {
         WebElement elm = null;
         switch (waitStrategy) {
             case VISIBLE:
-                elm = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitWait())).until(ExpectedConditions.visibilityOfElementLocated(by));
+                elm = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getFrameworkwait())).until(ExpectedConditions.visibilityOfElementLocated(by));
                 break;
             case PRESCENCE:
-                elm = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitWait())).until(ExpectedConditions.presenceOfElementLocated(by));
+                elm = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getFrameworkwait())).until(ExpectedConditions.presenceOfElementLocated(by));
                 break;
             case CLICKABLE:
-                elm = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitWait())).until(ExpectedConditions.elementToBeClickable(by));
+                elm = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getFrameworkwait())).until(ExpectedConditions.elementToBeClickable(by));
                 break;
             case NONE:
                 elm = DriverManager.getDriver().findElement(by);

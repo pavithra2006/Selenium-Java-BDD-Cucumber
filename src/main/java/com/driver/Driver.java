@@ -1,5 +1,6 @@
 package com.driver;
 
+import com.constants.FrameworkConstants;
 import com.enums.ConfigProperties;
 import com.factories.DriverFactory;
 import com.utils.PropertiesUtil;
@@ -21,10 +22,8 @@ public final class Driver {
 
             DriverManager.setDriver(DriverFactory.getDriver(browserName));
 
-            DriverManager.getDriver().get(PropertiesUtil.getValue(ConfigProperties.URL));
             DriverManager.getDriver().manage().window().maximize();
-            DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-            System.out.println("here");
+            DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(FrameworkConstants.getFrameworkwait()));
         }
     }
 

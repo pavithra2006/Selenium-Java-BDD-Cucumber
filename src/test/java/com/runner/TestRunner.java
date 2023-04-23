@@ -7,12 +7,12 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/features/LoginPage.feature"}
-        , glue = {"com/stepdefinitions"}
+        features = {"src/test/resources/features"}
+        , glue = {"com/stepdefinitions", "com/hooks"}
         , plugin = {"pretty"}
 //        , "json:target/output-report/report.json"
 //        , "junit:target/output-report/report.xml"}
-//        , publish = true    // reports will be retained only for 1 day
+        , publish = true    // reports will be retained only for 1 day
 //        , monochrome = true
 //        , dryRun = true
 )

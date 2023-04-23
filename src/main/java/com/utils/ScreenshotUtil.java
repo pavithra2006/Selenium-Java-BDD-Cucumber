@@ -8,7 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class ScreenshotUtil {
-    public static String getBase64Image() {
-        return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
+    public static byte[] getBase64Image() {
+        return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
     }
 }

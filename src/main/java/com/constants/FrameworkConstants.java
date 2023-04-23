@@ -11,5 +11,5 @@ public final class FrameworkConstants {
     @Getter(AccessLevel.PUBLIC)
     private static final String configPropertiesPath = resourcesPath + "/config/config.properties";
     @Getter(AccessLevel.PUBLIC)
-    private static final int explicitWait = 10;
+    private static final int frameworkwait = 30;
 }
