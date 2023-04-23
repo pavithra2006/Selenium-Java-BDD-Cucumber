@@ -8,18 +8,23 @@ import com.utils.ScreenshotUtil;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
+import org.apache.log4j.Logger;
 
-//@NoArgsConstructor(access = AccessLevel.PRIVATE)
+
 public final class Hooks {
+
+    Logger log = Logger.getLogger(Hooks.class);
+
     @Before
-    public void setUp() {
+    public void setUp(Scenario scenario) {
         try {
             Driver.init(PropertiesUtil.getValue(ConfigProperties.BROWSER));
         } catch (Exception e) {
             throw new BrowserInvocationFailedException("Exception while launching browser");
         }
+
+        log.info("******************************BeforeTest**********************************");
+        log.info("******************************" + scenario.getName() + "**********************************");
     }
 
     @After(order = 1)
@@ -31,7 +36,10 @@ public final class Hooks {
     }
 
     @After(order = 0)
-    public void tearDown() {
+    public void tearDown(Scenario scenario) {
         Driver.quitDriver();
+        log.info("******************************AfterTest**********************************");
+        log.info("******************************" + scenario.getName() + "**********************************");
     }
+
 }

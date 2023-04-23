@@ -1,9 +1,6 @@
 package com.pages;
 
-import com.driver.DriverManager;
-import com.enums.ConfigProperties;
 import com.enums.WaitStrategy;
-import com.utils.PropertiesUtil;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import org.openqa.selenium.By;

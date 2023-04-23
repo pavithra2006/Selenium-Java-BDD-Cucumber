@@ -15,7 +15,7 @@ import java.util.Properties;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class PropertiesUtil {
 
-    private static Properties properties = new Properties();
+    private static final Properties properties = new Properties();
     private static final HashMap<String, String> CONFIGMAP = new HashMap<>();
 
     static {

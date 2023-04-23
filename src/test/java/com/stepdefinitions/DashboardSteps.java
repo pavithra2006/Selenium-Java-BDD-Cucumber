@@ -1,7 +1,6 @@
 package com.stepdefinitions;
 
 import com.pages.DashboardPage;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.assertj.core.api.Assertions;
@@ -20,7 +19,6 @@ public class DashboardSteps {
 
     @Then("Verify user redirected to {string} page")
     public void verify_user_redirected_to_page(String searchProduct) throws InterruptedException {
-        Thread.sleep(10000);
         Assertions.assertThat(DashboardPage.getCurrentPgTitle())
                 .contains(searchProduct);
     }
