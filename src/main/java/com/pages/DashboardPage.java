@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import org.openqa.selenium.By;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public final class DashboardPage extends BasePage {
+public class DashboardPage extends BasePage {
 
     private static final By linkSignIn = By.xpath("//div[@class='layoutToolbarPadding']/a[contains(@href, 'signin')]");
 

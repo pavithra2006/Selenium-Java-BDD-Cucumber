@@ -3,6 +3,8 @@ package com.pages;
 import com.driver.DriverManager;
 import com.enums.WaitStrategy;
 import com.factories.WaitFactory;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -25,6 +27,7 @@ public class BasePage {
 
     protected static boolean isDisplayed(By by, WaitStrategy waitStrategy, String elmName) {
         WebElement elm = WaitFactory.performExplicitWait(by, waitStrategy);
+        System.out.println(elmName + "  element is displayed");
         return elm.isDisplayed();
     }
 

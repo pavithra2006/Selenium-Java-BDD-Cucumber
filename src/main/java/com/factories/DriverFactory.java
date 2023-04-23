@@ -1,6 +1,5 @@
 package com.factories;
 
-import com.driver.DriverManager;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import org.openqa.selenium.WebDriver;

@@ -2,6 +2,7 @@ package com.utils;
 
 import com.constants.FrameworkConstants;
 import com.enums.ConfigProperties;
+import com.exceptions.PropertyFileUsageException;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
@@ -29,10 +30,10 @@ public final class PropertiesUtil {
     }
 
     public static String getValue(ConfigProperties key) {
-        if (Objects.isNull(CONFIGMAP.get(key.toString().toLowerCase())) || Objects.isNull(key)) {
-            new RuntimeException("The given property or value is null, please check the property " + key);
+        if (Objects.isNull(CONFIGMAP.get(key.toString().toLowerCase()))) {
+            throw new PropertyFileUsageException("The given property or value is null, please check the property " + key);
         }
-        
+
         return CONFIGMAP.get(key.toString().toLowerCase());
     }
 }

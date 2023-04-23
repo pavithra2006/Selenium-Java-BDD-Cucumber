@@ -20,7 +20,7 @@ public class DashboardSteps {
 
     @Then("Verify user redirected to {string} page")
     public void verify_user_redirected_to_page(String searchProduct) throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         Assertions.assertThat(DashboardPage.getCurrentPgTitle())
                 .contains(searchProduct);
     }
