@@ -12,3 +12,5 @@ Feature: Login page
     Then Verify following fields present
       | Help text | Input box                    | Button   |
       | Sign In   | Email or mobile phone number | Continue |
+
+

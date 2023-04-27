@@ -22,22 +22,4 @@ public class DashboardSteps {
         Assertions.assertThat(DashboardPage.getCurrentPgTitle())
                 .contains(searchProduct);
     }
-
-    @Then("Verify {word}")
-    public void verify(String string) {
-        System.out.println(string);
-    }
-
-
-    @Then("Alternative text abc/cde")
-    public void alternative_text_abc_cde() {
-        System.out.println("alternative");
-    }
-
-    @Then("optional test example(s)")
-    public void optional_test_example_s() {
-        System.out.println("optional");
-    }
-
-
 }

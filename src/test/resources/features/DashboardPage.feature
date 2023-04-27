@@ -12,3 +12,4 @@ Feature: Dashboard page
       | Products |
       | Bags     |
       | Watches  |
+      | HandBags |

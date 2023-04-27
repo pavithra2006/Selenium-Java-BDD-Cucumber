@@ -8,10 +8,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/features"}
         , glue = {"com/stepdefinitions", "com/hooks"}
-        , plugin = {"pretty"}
-        , publish = true
+        , plugin = {"pretty"
+        , "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+        , "timeline:test-output-thread/"}   // to check in which thread which tcs exectured in index.html file
 //        , monochrome = true
-        , dryRun = true
+//        , dryRun = true
 )
 public class TestRunner {
 }
