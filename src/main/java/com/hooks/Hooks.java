@@ -8,12 +8,11 @@ import com.utils.ScreenshotUtil;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 public final class Hooks {
-
-    Logger log = Logger.getLogger(Hooks.class);
 
     @Before
     public void setUp(Scenario scenario) {
@@ -22,9 +21,6 @@ public final class Hooks {
         } catch (Exception e) {
             throw new BrowserInvocationFailedException("Exception while launching browser");
         }
-
-        log.info("******************************BeforeTest**********************************");
-        log.info("******************************" + scenario.getName() + "**********************************");
     }
 
     @After(order = 1)
@@ -38,8 +34,6 @@ public final class Hooks {
     @After(order = 0)
     public void tearDown(Scenario scenario) {
         Driver.quitDriver();
-        log.info("******************************AfterTest**********************************");
-        log.info("******************************" + scenario.getName() + "**********************************");
     }
 
 }

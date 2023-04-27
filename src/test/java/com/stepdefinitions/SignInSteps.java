@@ -22,7 +22,7 @@ public class SignInSteps {
     }
 
     @Then("Verify following fields present")
-    public void verify_following_fields_present(DataTable dataTable) throws InterruptedException {
+    public void verify_following_fields_present(DataTable dataTable) {
         Uninterruptibles.sleepUninterruptibly(Duration.ofSeconds(10));
 
         List<Map<String, String>> map = dataTable.asMaps();

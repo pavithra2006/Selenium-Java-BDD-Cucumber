@@ -1,13 +1,9 @@
 package com.stepdefinitions;
 
-import com.driver.Driver;
-import com.driver.DriverManager;
 import com.enums.ConfigProperties;
 import com.pages.DashboardPage;
 import com.utils.PropertiesUtil;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import org.assertj.core.api.Assertions;
 
 public class BackgroundSteps {
     @Given("Navigate to Amazon home page")
