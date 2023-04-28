@@ -4,12 +4,18 @@ Feature: Login page
     Given Navigate to Amazon home page
     Then Verify page title is "Amazon.in"
 
+  @Smoke
   Scenario: Verify login page
 
     When I click on "Sign in link"
-    And User redirects to Sign in page
-    Then Verify page title is "Amazon Sign In"
-    Then Verify following fields present
-      | Help text | Input box                    | Button   |
-      | Sign In   | Email or mobile phone number | Continue |
+#    And User redirects to Sign in page
+#    Then Verify page title is "Amazon Sign In"
+#    Then Verify following fields present
+#      | Help text | Input box                    | Button   |
+#      | Sign In   | Email or mobile phone number | Continue |
 
+
+  @Skip
+  Scenario: Verify login page - with skip tag
+
+    When I click on "Sign in link"

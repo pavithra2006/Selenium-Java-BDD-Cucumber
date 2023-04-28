@@ -5,20 +5,19 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = {"src/test/resources/parallel"}
+        features = {"@target/failedTcs.txt"}
         , glue = {"parallel", "com/hooks"}
         , plugin = {"pretty"
         , "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         , "timeline:test-output-thread/"
-        , "rerun:target/failedTcs.txt"} //creates a text file containing failed tcs under target folder
-        , tags = "not @Skip"
+        , "rerun:target/failedTcs.txt"}
 )
-public class TestNgRunner extends AbstractTestNGCucumberTests {
+
+public class FailedTcsRunner extends AbstractTestNGCucumberTests {
     @Override
     @DataProvider(parallel = true)
     public Object[][] scenarios() {
-        System.out.println("testNg runner");
+        System.out.println("testNg failed tcs runner");
         return super.scenarios();
     }
-
 }
