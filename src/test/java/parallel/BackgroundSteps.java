@@ -1,4 +1,4 @@
-package com.stepdefinitions;
+package parallel;
 
 import com.enums.ConfigProperties;
 import com.pages.DashboardPage;

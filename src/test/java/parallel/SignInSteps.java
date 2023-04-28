@@ -1,10 +1,9 @@
-package com.stepdefinitions;
+package parallel;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 import com.pages.DashboardPage;
 import com.pages.SignInPage;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.assertj.core.api.Assertions;

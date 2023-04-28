@@ -1,4 +1,4 @@
-package com.stepdefinitions;
+package parallel;
 
 import com.pages.DashboardPage;
 import io.cucumber.java.en.Then;

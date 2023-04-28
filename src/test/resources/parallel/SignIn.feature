@@ -13,4 +13,3 @@ Feature: Login page
       | Help text | Input box                    | Button   |
       | Sign In   | Email or mobile phone number | Continue |
 
-
