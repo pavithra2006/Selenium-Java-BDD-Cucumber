@@ -23,14 +23,16 @@
                 <version>3.0.0</version>
                 <configuration>
                     <includes>
-                        <include>**/SerenityRunner.java</include>
+                        <!--                        <include>**/SerenityRunner.java</include>-->
+                        <include>**/TestNgRunner.java</include>
+
                     </includes>
                     <parallel>methods</parallel>
                     <useUnlimitedThreads>true</useUnlimitedThreads>
                     <properties>
                         <property>
                             <name>dataproviderthreadcount</name>
-                            <value>4</value>
+                            <value>6</value>
                         </property>
                     </properties>
                 </configuration>
