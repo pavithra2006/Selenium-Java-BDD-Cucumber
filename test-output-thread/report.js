@@ -1,4 +1,0 @@
-$(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"dfcc7b8e-ceb4-400c-82f2-6495da0a737a","feature":"Dashboard page","scenario":"Search feature","start":1683025988622,"group":1,"content":"","tags":"","end":1683025995802,"className":"failed"},{"id":"9c8a997d-0b7b-4637-8ffc-365259c88678","feature":"Dashboard page","scenario":"Search feature","start":1683025938908,"group":1,"content":"","tags":"","end":1683025981424,"className":"failed"},{"id":"f385e0f3-8982-4c37-8f17-1b1f31a91967","feature":"Dashboard page","scenario":"Search feature","start":1683025981459,"group":1,"content":"","tags":"","end":1683025988605,"className":"failed"},{"id":"2e2b2ee2-065b-4e23-8f87-cbde3748820d","feature":"Login page","scenario":"Verify login page","start":1683025995816,"group":1,"content":"","tags":"@smoke,","end":1683026013886,"className":"passed"}]);
-CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
-});
