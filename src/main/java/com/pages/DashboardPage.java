@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DashboardPage extends BasePage {
-
     private static final By linkSignIn = By.xpath("//div[@class='layoutToolbarPadding']/a[contains(@href, 'signin')]");
 
     private static final By inputboxSearch = By.xpath("//input[@placeholder='Search Amazon.in']");

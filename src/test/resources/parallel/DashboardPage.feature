@@ -13,3 +13,4 @@ Feature: Dashboard page
       | Bags     |
       | Watches  |
       | HandBags |
+
