@@ -13,7 +13,7 @@ public final class DriverFactory {
         WebDriver driver = null;
         if (browserName.equalsIgnoreCase("Chrome")) {
             ChromeOptions options = new ChromeOptions();
-//            options.addArguments("headless");
+            options.addArguments("headless");
             driver = new ChromeDriver(options);
         } else if (browserName.equalsIgnoreCase("Edge")) {
             driver = new EdgeDriver();

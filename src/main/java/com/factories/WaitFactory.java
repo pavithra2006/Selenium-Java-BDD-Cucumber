@@ -14,7 +14,6 @@ import java.time.Duration;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class WaitFactory {
-
     public static WebElement performExplicitWait(By by, WaitStrategy waitStrategy) {
         WebElement elm = null;
         switch (waitStrategy) {
