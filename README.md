@@ -4,6 +4,7 @@
 - Java
 - Selenium
 - SeleniumManager
+- Cucumber7
 - TestNG
 - Maven
 - AssertJ
