@@ -45,4 +45,21 @@ public class BasePage {
         return getCurrentPgTitle;
     }
 
+    protected static void click(By by, WaitStrategy waitStrategy) {
+        WebElement elm = WaitFactory.performExplicitWait(by, waitStrategy);
+        elm.click();
+    }
+
+    protected static boolean isDisplayed(By by, WaitStrategy waitStrategy) {
+        boolean isElmDisplayed;
+        WebElement elm = WaitFactory.performExplicitWait(by, waitStrategy);
+        isElmDisplayed = elm.isDisplayed();
+        return isElmDisplayed;
+    }
+
+    protected static void sendKeys(By by, WaitStrategy waitStrategy, String textToBeEntered) {
+        WebElement elm = WaitFactory.performExplicitWait(by, waitStrategy);
+        elm.sendKeys(textToBeEntered);
+    }
+
 }
