@@ -14,12 +14,12 @@ public final class DriverManager {
         return driverThreadLocal.get();
     }
 
-    public static void setDriver(WebDriver driverReference) {
+    static void setDriver(WebDriver driverReference) {
         if (Objects.nonNull(driverReference))
             driverThreadLocal.set(driverReference);
     }
 
-    public static void unload() {
+    static void unload() {
         driverThreadLocal.remove();
     }
 }
