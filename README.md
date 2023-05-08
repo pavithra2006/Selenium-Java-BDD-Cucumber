@@ -17,11 +17,12 @@
 - Parallel cross-browser testing using testNg ( runs scenario parallely) & Cucumber runner - runs feature file parallely
 - Log4j
 
+
 # Advanced features
 - Using SonarLint to write clean code 
 
-# Rules to be followed while creating a framework
 
+# Rules to be followed while creating a framework
 - Never hardcode.
 - Keep the right things in the right place.
 - Religiously practice the Reuse culture.
